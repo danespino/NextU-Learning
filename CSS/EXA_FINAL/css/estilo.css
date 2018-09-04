@@ -1,0 +1,51 @@
+﻿body{
+	background-color: #02010a;
+	font:"Dancing Script", serif;
+}
+
+#contenido
+{
+	max-width:900px;
+	min-height:200px;
+	margin:0 auto;
+}
+
+#contenido header{
+	background-color:#5b7989;
+	padding:0.8em;
+	border-radius: 10px 10px 0px 0px;
+}
+
+header h1{
+	text-align:left;
+	color:#FFF;
+	text-shadow:2px 2px #02010a;
+}
+
+#navbar{
+	display:inline;
+	float:right;
+	margin-top:-15px
+}
+
+#navbar a, a:active
+{
+	color:#FEFEFE;
+	font-size:16px;
+	text-decoration:underline;
+}
+
+#navbar a[href^="#"]{
+	text-decoration:none;
+}
+
+@media (max-width:899px){
+	#contenido{	
+		width:100%;
+		max-width:100%;
+	}
+	
+	#navbar{
+		display:none;
+	}
+}
