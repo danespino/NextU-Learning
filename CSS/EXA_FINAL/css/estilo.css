@@ -24,6 +24,10 @@ header .title{
 	font-size:2em;
 }
 
+.title span{
+	display:none;
+}
+
 #navbar{
 	display:inline-block;
 	font-size:1.5em;
@@ -52,6 +56,10 @@ section{
 	width:100%;
 	flex-flow: column;
 	align-items: flex-start;
+}
+
+section .flex-container{
+	background-color:#d5c75f;   // No aplicar background a .flex-container unicamente porque afectara footer.
 }
 
 #col1{
@@ -98,18 +106,15 @@ section{
 	padding:3.5%;
 	margin:0 auto;
 	text-align:center;
-	min-height:101%;
 }
 
 #col3 a:hover img{
 	transform: translate(20px, -5px);
 }
 
-
-
 footer{
 	width:96%;
-	background-color:#C6d5c5;
+	background-color:#C6d5c5 !important;
 	padding:2%;
 	border-radius:0px 0px 10px 10px !important;
 	min-height:70px;
@@ -117,6 +122,32 @@ footer{
 
 article[id^="fcol"]{
 	width:100%;
+}
+
+article[id^="gallery"]{
+	width:100%;
+	background-color:#d5c75f !important;
+	text-align: center;
+}
+
+article[id^="gallery"] img{
+	margin:1%;
+	width:95%;
+}
+
+article[id^="gallery"]:nth-child(1) img{
+	-webkit-filter: blur(10px);
+	filter: grayscale(10px);
+}
+
+article[id^="gallery"]:nth-child(even) img{
+	 -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+}
+
+article[id^="gallery"]:nth-child(3) img{
+	-webkit-filter: sepia(90%);
+	filter: sepia(90%);
 }
 
 .social-list{
@@ -165,6 +196,11 @@ article[id^="fcol"]{
 		font-size:2.2em;
 	}
 	
+	.title span{
+		display:inline;
+		font-size:0.6em;
+	}
+	
 	#navbar{
 		display:inline-block;
 		margin-top:-5%;
@@ -175,11 +211,28 @@ article[id^="fcol"]{
 	.flex-container{
 		display:flex;
 		flex-flow: row;
+		flex-wrap: wrap;
 		justify-content:space-between;
+	}
+	
+	#col2, #col3{
+		width:46%;
+		padding: 2%;
+		text-align:center;
 	}
 	
 	article[id^="fcol"]{
 		width:23%;
+		padding: 1%;
+	}
+	
+	article[id^="gallery"]{
+		width: 30%;
+		padding: 1%;
+	}
+	
+	article[id^="gallery"] img{
+		width: 98%;
 		padding: 2%;
 	}
 	
